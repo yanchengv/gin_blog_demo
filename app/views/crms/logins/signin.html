@@ -1,0 +1,61 @@
+{{define "logins/signin.html"}}
+    <!doctype html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+        <meta name="generator" content="Hugo 0.80.0">
+        <title>goMars</title>
+
+
+
+        <!-- Bootstrap core CSS -->
+        <link href="/assets/stylesheets/bootstrap/bootstrap.min.css" rel="stylesheet">
+        <link href="/assets/stylesheets/signin.css" rel="stylesheet">
+        <script type="text/javascript" src="/assets/javascripts/bootstrap/bootstrap.min.js"> </script>
+
+
+        <style>
+            .bd-placeholder-img {
+                font-size: 1.125rem;
+                text-anchor: middle;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+
+            @media (min-width: 768px) {
+                .bd-placeholder-img-lg {
+                    font-size: 3.5rem;
+                }
+            }
+        </style>
+
+    </head>
+    <body class="text-center">
+
+    <form class="form-signin" action="/crms/login" method="post">
+        <h1 class="h3 mb-3 font-weight-normal">登录</h1>
+        <label for="inputEmail" class="sr-only">邮箱</label>
+        <input type="email" id="inputEmail" class="form-control" name="email" placeholder="邮箱" required autofocus>
+        <label for="inputPassword" class="sr-only">密码</label>
+        <input type="password" id="inputPassword" class="form-control" name="password" placeholder="密码" required>
+        <div class="checkbox mb-3">
+            <label>
+                <input type="checkbox" value="remember-me"> 记住我
+            </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
+        <p class="mt-5 mb-3 text-muted">&copy; 2017-2021</p>
+    </form>
+
+
+
+    </body>
+    </html>
+
+
+{{ end }}

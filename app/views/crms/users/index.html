@@ -1,0 +1,47 @@
+
+{{define "users/index.html"}}
+    {{template "layout" .}}
+{{end}}
+
+{{define "appcontent"}}
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">#ID</th>
+            <th scope="col">用户名</th>
+            <th scope="col">邮箱</th>
+            <th scope="col">创建时间</th>
+            <th scope="col">操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{range $user := .users}}
+            <tr>
+                <td>{{$user.ID}}</td>
+                <td>{{$user.Name}}</td>
+                <td>{{$user.Email}}</td>
+                <td>{{$user.CreatedAt}}</td>
+                <td>操作</td>
+            </tr>
+        {{end}}
+
+        </tbody>
+    </table>
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+{{end}}

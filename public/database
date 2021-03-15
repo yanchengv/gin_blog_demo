@@ -1,0 +1,27 @@
+### users用户表
+    id
+    name
+    email
+    password
+    created_at
+    updated_at
+    
+### tags标签表
+    id
+    name
+    created_at
+    updated_at    
+    
+### articles 文章表
+    id
+    title    标题
+    subtitle 子标题
+    content
+    created_at
+    updated_at
+### article_tags 文章标签表
+    id
+    tag_id
+    article_id    
+    created_at
+    updated_at
