@@ -20,6 +20,8 @@ func SetupRoute() *gin.Engine {
 		articles := crms.Group("/articles")
 		{
 			articles.GET("", controllerscrms.ArticleIndex)
+			articles.GET("/new", controllerscrms.ArticleNew)
+			articles.POST("/create", controllerscrms.ArticleCreate)
 		}
 
 	}

@@ -2,23 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58ef36fb-12cd-40d9-8193-0b272d1e276a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/crms/articles.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/crms/netedtemplate.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/crms/articles/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/crms/articles/new.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/javascripts/tinymce/skins/lightgray/content.inline.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/javascripts/tinymce/skins/lightgray/content.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/javascripts/tinymce/skins/lightgray/content.mobile.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/javascripts/tinymce/skins/lightgray/fonts/tinymce-mobile.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/javascripts/tinymce/skins/lightgray/fonts/tinymce-small.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/javascripts/tinymce/skins/lightgray/fonts/tinymce-small.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/javascripts/tinymce/skins/lightgray/fonts/tinymce-small.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/javascripts/tinymce/skins/lightgray/fonts/tinymce-small.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/javascripts/tinymce/skins/lightgray/fonts/tinymce.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/javascripts/tinymce/skins/lightgray/fonts/tinymce.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/javascripts/tinymce/skins/lightgray/fonts/tinymce.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/javascripts/tinymce/skins/lightgray/fonts/tinymce.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/javascripts/tinymce/skins/lightgray/img/anchor.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/javascripts/tinymce/skins/lightgray/img/loader.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/javascripts/tinymce/skins/lightgray/img/object.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/javascripts/tinymce/skins/lightgray/img/trans.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/javascripts/tinymce/skins/lightgray/skin.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/javascripts/tinymce/skins/lightgray/skin.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/javascripts/tinymce/skins/lightgray/skin.mobile.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/javascripts/tinymce/skins/lightgray/skin.mobile.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/javascripts/tinymce/tinymce.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/stylesheets/coreui/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/crms/home.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/crms/home.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/crms/sessions.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/crms/sessions.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/crms/homes/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/crms/homes/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/crms/layouts/application.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/crms/layouts/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/crms/layouts/head.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/head.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/crms/layouts/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/crms/layouts/side_menus.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/side_menus.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/crms/logins/signin.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/logins/signin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/crms/users/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/crms/users/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/crms/articles.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/crms/articles.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/crms/articles/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/crms/articles/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/adminroutes.go" beforeDir="false" afterPath="$PROJECT_DIR$/routes/adminroutes.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,8 +40,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Go File" />
         <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="Go File" />
       </list>
     </option>
   </component>
@@ -53,23 +64,24 @@
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/javascripts/tinymce" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="go.vgo" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/javascripts/tinymce" />
+      <recent name="$PROJECT_DIR$/assets/javascripts" />
+      <recent name="$PROJECT_DIR$/assets/stylesheets" />
       <recent name="$PROJECT_DIR$/assets/images" />
       <recent name="$PROJECT_DIR$/assets/javascripts/coreui" />
-      <recent name="$PROJECT_DIR$/assets/stylesheets/coreui" />
-      <recent name="$PROJECT_DIR$/assets/stylesheets" />
-      <recent name="$PROJECT_DIR$/assets/stylesheets/bootstrap" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/javascripts/tinymce" />
       <recent name="$PROJECT_DIR$/app/views" />
       <recent name="$PROJECT_DIR$/assets/javascripts/coreui" />
       <recent name="$PROJECT_DIR$/app/controllers/crms" />
       <recent name="$PROJECT_DIR$/app" />
-      <recent name="$PROJECT_DIR$/routers" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -127,6 +139,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="gin的多模板继承实现" />
+    <option name="LAST_COMMIT_MESSAGE" value="gin的多模板继承实现" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
