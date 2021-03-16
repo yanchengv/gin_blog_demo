@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>管理后台系统</title>
+
+    <link href="/assets/stylesheets/coreui/coreui.min.css" rel="stylesheet">
+
+    <script type="text/javascript" src="/assets/javascripts/coreui/coreui.bundle.min.js"></script>
+
+</head>
+<body class="c-app">
+
+{{template  "side_menus" }}
+
+<div class="c-wrapper c-fixed-components">
+
+    {{template "header"}}
+
+    <div class="c-body">
+        <main class="c-main">
+            <div class="container-fluid">
+
+                {{/*<h1>在此处填充内容</h1>*/}}
+
+                {{block "content" .}}{{end}}
+            </div>
+        </main>
+    </div>
+
+
+    {{template "footer"}}
+
+</div>
+
+<!--<![endif]-->
+</body>
+</html>

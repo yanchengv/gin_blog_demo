@@ -4,19 +4,19 @@
         <thead>
         <tr>
             <th scope="col">#ID</th>
-            <th scope="col">用户名</th>
-            <th scope="col">邮箱</th>
+            <th scope="col">标题</th>
+            <th scope="col">子标题</th>
             <th scope="col">创建时间</th>
             <th scope="col">操作</th>
         </tr>
         </thead>
         <tbody>
-        {{range $user := .users}}
+        {{range $article := .articles}}
             <tr>
-                <td>{{$user.ID}}</td>
-                <td>{{$user.Name}}</td>
-                <td>{{$user.Email}}</td>
-                <td>{{$user.CreatedAt}}</td>
+                <td>{{$article.ID}}</td>
+                <td>{{$article.Title}}</td>
+                <td>{{$article.Subtitle}}</td>
+                <td>{{$article.CreatedAt}}</td>
                 <td>操作</td>
             </tr>
         {{end}}
