@@ -1,26 +1,24 @@
 package controllerscrms
 
-import "C"
 import (
 	"github.com/gin-gonic/gin"
 	"go_mars/app/models"
+	"go_mars/lib/pagination"
+	"html/template"
 	"net/http"
 )
 
 func ArticleIndex(c *gin.Context) {
 	pageindex := 1
 	pagesize := 30
-	type pagination struct {
-		CurrentPage int
-		TotalPage   int
-		PageSize    int
-	}
-	page := pagination{CurrentPage: pageindex, TotalPage: 10, PageSize: 30}
 	var articles []models.Article
-	models.DB.Offset((page.CurrentPage - 1) * pagesize).Limit(pagesize).Find(&articles)
+	models.DB.Offset((pageindex - 1) * pagesize).Limit(pagesize).Find(&articles)
+	//创建一个分页器，一万条数据，每页30条
+	pagination := pagination.Initialize(c.Request, 100, 10)
+	//传到模板中需要转换成template.HTML类型，否则html代码会被转义
 	c.HTML(http.StatusOK, "articles/index.html", gin.H{
 		"articles": articles,
-		"page":     page,
+		"paginate": template.HTML(pagination.Pages()),
 	})
 }
 
