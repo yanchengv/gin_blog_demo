@@ -12,12 +12,12 @@ import (
 //Pagination 分页器
 type Pagination struct {
 	Request  *http.Request
-	Total    int //总行数
-	Pagesize int //每页的数量
+	Total    int64 //总行数
+	Pagesize int   //每页的数量
 }
 
 //Initialize 初始化分页器
-func Initialize(req *http.Request, total int, pagesize int) *Pagination {
+func Initialize(req *http.Request, total int64, pagesize int) *Pagination {
 	return &Pagination{
 		Request:  req,
 		Total:    total,

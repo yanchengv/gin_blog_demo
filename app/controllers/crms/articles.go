@@ -6,15 +6,22 @@ import (
 	"go_mars/lib/pagination"
 	"html/template"
 	"net/http"
+	"strconv"
 )
 
 func ArticleIndex(c *gin.Context) {
-	pageindex := 1
-	pagesize := 30
+
+	pageindex, err := strconv.Atoi(c.Query("page"))
+	if err != nil {
+		pageindex = 1
+	}
+	pagesize := 1
 	var articles []models.Article
-	models.DB.Offset((pageindex - 1) * pagesize).Limit(pagesize).Find(&articles)
-	//创建一个分页器，一万条数据，每页30条
-	pagination := pagination.Initialize(c.Request, 100, 10)
+	var totalCount int64
+	models.DB.Model(&models.Article{}).Count(&totalCount)
+	models.DB.Debug().Offset((pageindex - 1) * pagesize).Limit(pagesize).Order("created_at asc").Find(&articles)
+	//创建一个分页器，每页30条
+	pagination := pagination.Initialize(c.Request, totalCount, pagesize)
 	//传到模板中需要转换成template.HTML类型，否则html代码会被转义
 	c.HTML(http.StatusOK, "articles/index.html", gin.H{
 		"articles": articles,

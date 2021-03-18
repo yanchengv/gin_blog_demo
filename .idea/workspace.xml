@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58ef36fb-12cd-40d9-8193-0b272d1e276a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/pagination/pagination.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/crms/articles.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/crms/articles.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/crms/articles/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/crms/articles/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/crms/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/crms/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/db.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/crms/users/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/crms/users/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pagination/pagination.go" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pagination/pagination.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -119,7 +121,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="gin的多模板继承实现" />
     <MESSAGE value="gin的多模板layout继承实现和富文本" />
-    <option name="LAST_COMMIT_MESSAGE" value="gin的多模板layout继承实现和富文本" />
+    <MESSAGE value="实现一个bootstrap风格的模板分页处理" />
+    <option name="LAST_COMMIT_MESSAGE" value="实现一个bootstrap风格的模板分页处理" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
