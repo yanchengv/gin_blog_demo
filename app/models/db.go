@@ -22,5 +22,5 @@ func InitDB() {
 	// SetMaxOpenConns 设置打开数据库连接的最大数量。
 	sqlDB.SetMaxOpenConns(100)
 	//自动生成表
-	DB.AutoMigrate(&User{}, &Article{}, &Tag{}, &ArticleTag{}, &Test{})
+	DB.AutoMigrate(&User{}, &Article{}, &Tag{}, &ArticleTag{})
 }

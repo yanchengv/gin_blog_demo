@@ -17,8 +17,13 @@
                 <td>{{$article.ID}}</td>
                 <td>{{$article.Title}}</td>
                 <td>{{$article.Subtitle}}</td>
-                <td>{{$article.CreatedAt}}</td>
-                <td>操作</td>
+                <td>{{$article.CreatedAt.Format "2006-01-02 15:04:05"}}</td>
+                <td>
+                    <a class="btn btn-primary" href="/crms/articles/edit?id={{$article.ID}}" role="button">修改</a>
+                    <button type="button" class="btn btn-danger" data-toggle="modal"
+                            onclick="articleDeleteModal({{$article.ID}},{{$article.Title}})">删除
+                    </button>
+                </td>
             </tr>
         {{end}}
 
@@ -26,4 +31,43 @@
     </table>
     {{.paginate}}
 
+
+    <div class="modal fade" id="deleteArticleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">删除文章</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h5 id="deleteTitle"></h5>
+                </div>
+                <form action="/crms/articles/destroy" method="post">
+                    <input type="hidden" id="delArticleId" name="id">
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                        <button type="submit" class="btn btn-primary">确定</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function articleDeleteModal(articleId, title) {
+            $('#deleteArticleModal').modal('show');
+            $('#deleteArticleModal').on('shown.bs.modal', function () {
+                $('#delArticleId').val(articleId)
+                $('#deleteTitle').html(title)
+
+            })
+
+        }
+    </script>
+
 {{end}}
+

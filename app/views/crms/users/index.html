@@ -1,5 +1,6 @@
-
 {{define "content"}}
+    <a class="btn btn-primary" href="/crms/users/new" role="button">新建</a>
+
     <table class="table">
         <thead>
         <tr>
@@ -16,8 +17,11 @@
                 <td>{{$user.ID}}</td>
                 <td>{{$user.Name}}</td>
                 <td>{{$user.Email}}</td>
-                <td>{{$user.CreatedAt}}</td>
-                <td>操作</td>
+                <td>{{$user.CreatedAt.Format "2006-01-02 15:04:05"}}</td>
+                <td>
+                    <a class="btn btn-primary" href="/crms/users/edit?id={{$user.ID}}" role="button">修改</a>
+                    <button type="button" class="btn btn-danger" data-toggle="modal" onclick="userDeleteModal({{$user.ID}},{{$user.Name}})">删除</button>
+                </td>
             </tr>
         {{end}}
 
@@ -25,5 +29,43 @@
     </table>
 
     {{.paginate}}
+
+
+
+    <div class="modal fade" id="deleteUserModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">删除用户</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h5 id="deleteUserName"></h5>
+                </div>
+                <form action="/crms/users/destroy" method="post">
+                    <input type="hidden" id="delUserId" name="id">
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                        <button type="submit" class="btn btn-primary">确定</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function userDeleteModal(userId, name) {
+            $('#deleteUserModal').modal('show');
+            $('#deleteUserModal').on('shown.bs.modal', function () {
+                $('#delUserId').val(userId)
+                $('#deleteUserName').html(name)
+
+            })
+
+        }
+    </script>
 
 {{end}}

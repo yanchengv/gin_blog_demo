@@ -3,10 +3,10 @@ package models
 import "time"
 
 type Article struct {
-	ID        uint
-	Title     string
-	Subtitle  string
-	Content   string `json: content;gorm:"type:longtext"`
+	ID        uint   `form:"id"`
+	Title     string `form: "title"`
+	Subtitle  string `form: "subtitle"`
+	Content   string `form: "content";json: content;gorm:"type:longtext"`
 	CreatedAt time.Time
 	UpdatedAt time.Time
 }

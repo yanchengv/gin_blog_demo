@@ -13,7 +13,7 @@ func AuthUser() gin.HandlerFunc {
 		if err != nil || userId == "" {
 			//获取cookie报错或者userId为空则跳转登录界面
 			fmt.Println("请先登录")
-			c.Redirect(http.StatusMovedPermanently, "/crms/login")
+			c.Redirect(http.StatusSeeOther, "/crms/login")
 		}
 		c.Next()
 	}

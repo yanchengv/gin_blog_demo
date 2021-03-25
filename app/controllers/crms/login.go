@@ -9,13 +9,8 @@ import (
 	"time"
 )
 
-
 func LoginIndex(c *gin.Context) {
-	//user := models.User{Name: "闫"}
-	//models.DB.Create(&user)
-	c.HTML(200, "logins/signin.html", gin.H{
-
-	})
+	c.HTML(200, "logins/signin.html", gin.H{})
 }
 
 func Login(c *gin.Context) {
@@ -23,15 +18,15 @@ func Login(c *gin.Context) {
 	//用户身份校验
 	email := c.PostForm("email")
 	password := c.PostForm("password")
-	models.DB.Where("email = ?",email).First(&user)
+	models.DB.Where("email = ?", email).First(&user)
 	if user.Email != email {
 		fmt.Println("用户不存在！")
-		c.Redirect(http.StatusMovedPermanently,"/crms/login")
+		c.Redirect(http.StatusSeeOther, "/crms/login")
 		return
 	}
 	if user.Password != password {
 		fmt.Println("密码不正确！")
-		c.Redirect(http.StatusMovedPermanently,"/crms/login")
+		c.Redirect(http.StatusSeeOther, "/crms/login")
 		return
 	}
 	userID := strconv.Itoa(int(user.ID))
@@ -41,5 +36,5 @@ func Login(c *gin.Context) {
 	//cookie信息
 	cookie := http.Cookie{Name: "userID", Value: userID, Expires: expiration}
 	http.SetCookie(c.Writer, &cookie)
-	c.Redirect(http.StatusMovedPermanently,"/crms/homes")
+	c.Redirect(http.StatusSeeOther, "/crms/homes")
 }

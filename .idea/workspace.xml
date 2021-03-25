@@ -2,12 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58ef36fb-12cd-40d9-8193-0b272d1e276a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/views/crms/articles/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/crms/users/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/crms/users/new.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/javascripts/jquery-3.6.0.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/crms/articles.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/crms/articles.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/crms/login.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/crms/login.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/crms/netedtemplate.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/crms/template.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/crms/sessions.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/crms/sessions.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/crms/user.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/crms/user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/article.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/article.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/db.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/crms/articles/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/crms/articles/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/crms/users/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/crms/users/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pagination/pagination.go" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pagination/pagination.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/logins/signin.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/logins/signin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gomars" beforeDir="false" afterPath="$PROJECT_DIR$/gomars" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/adminroutes.go" beforeDir="false" afterPath="$PROJECT_DIR$/routes/adminroutes.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,9 +30,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="CSS File" />
         <option value="Go File" />
+        <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -122,7 +135,8 @@
     <MESSAGE value="gin的多模板继承实现" />
     <MESSAGE value="gin的多模板layout继承实现和富文本" />
     <MESSAGE value="实现一个bootstrap风格的模板分页处理" />
-    <option name="LAST_COMMIT_MESSAGE" value="实现一个bootstrap风格的模板分页处理" />
+    <MESSAGE value="分页" />
+    <option name="LAST_COMMIT_MESSAGE" value="分页" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
