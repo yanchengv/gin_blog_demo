@@ -14,8 +14,6 @@
         </button>
         <ul class="c-header-nav d-md-down-none">
             <li class="c-header-nav-item px-3"><a class="c-header-nav-link" href="/crms/homes">主页</a></li>
-            <li class="c-header-nav-item px-3"><a class="c-header-nav-link" href="#">Users</a></li>
-            <li class="c-header-nav-item px-3"><a class="c-header-nav-link" href="#">Settings</a></li>
         </ul>
         <ul class="c-header-nav ml-auto mr-4">
             <li class="c-header-nav-item dropdown">
@@ -26,7 +24,7 @@
                     </div>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right pt-0">
-                    <div class="dropdown-header bg-light py-2"><strong>用户信息</strong></div>
+                    <div class="dropdown-header bg-light py-2"><strong id="headerUserInfoName">用户信息</strong></div>
                     <a class="dropdown-item" href="#">
 
                         <svg class="c-icon mr-2 bi bi-grid" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -46,11 +44,21 @@
         <div class="c-subheader px-3">
             <!-- Breadcrumb-->
             <ol class="breadcrumb border-0 m-0">
-                <li class="breadcrumb-item">Home</li>
-                <li class="breadcrumb-item"><a href="#">Admin</a></li>
-                <li class="breadcrumb-item active">Dashboard</li>
+                <li class="breadcrumb-item">主页</li>
+                <li class="breadcrumb-item"><a href="#">返回</a></li>
+                <li class="breadcrumb-item active">面板</li>
                 <!-- Breadcrumb Menu-->
             </ol>
         </div>
     </header>
+
+    <script>
+        $.ajax({
+            method: "get",
+            url: "/crms/users/getUserInfo",
+            success: function(data){
+                $("#headerUserInfoName").html(data["userName"])
+            }
+        })
+    </script>
 {{end}}

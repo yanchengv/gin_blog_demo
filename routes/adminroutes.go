@@ -33,6 +33,7 @@ func SetupRoute() *gin.Engine {
 			users.POST("/create", controllerscrms.UserCreate)
 			users.POST("/update", controllerscrms.UserUpdate)
 			users.POST("/destroy", controllerscrms.UserDestroy)
+			users.GET("/getUserInfo", controllerscrms.GetUserInfo)
 		}
 		articles := crms.Group("/articles")
 		{
