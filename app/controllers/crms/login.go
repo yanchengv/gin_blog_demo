@@ -5,6 +5,7 @@ import (
 	"github.com/gin-contrib/sessions"
 	"github.com/gin-gonic/gin"
 	"go_mars/app/models"
+	myutils "go_mars/lib"
 	"net/http"
 	"strconv"
 )
@@ -17,7 +18,7 @@ func Login(c *gin.Context) {
 	var user models.User
 	//用户身份校验
 	email := c.PostForm("email")
-	password := c.PostForm("password")
+	password := myutils.Md5(c.PostForm("password"))
 	models.DB.Where("email = ?", email).First(&user)
 	if user.Email != email {
 		fmt.Println("用户不存在！")
