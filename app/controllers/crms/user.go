@@ -1,6 +1,7 @@
 package controllerscrms
 
 import (
+	"github.com/gin-contrib/sessions"
 	"github.com/gin-gonic/gin"
 	"go_mars/app/models"
 	"go_mars/lib/pagination"
@@ -62,4 +63,14 @@ func UserUpdate(c *gin.Context) {
 func UserDestroy(c *gin.Context) {
 	models.DB.Where("id =?", c.PostForm("id")).Delete(models.User{})
 	c.Redirect(http.StatusFound, "/crms/users")
+}
+
+func GetUserInfo(c *gin.Context) {
+	var user models.User
+	session := sessions.Default(c)
+	models.DB.Where("id = ?", session.Get("currentUID")).First(&user)
+	c.JSON(http.StatusOK, gin.H{
+		"userID":   user.ID,
+		"userName": user.Name,
+	})
 }

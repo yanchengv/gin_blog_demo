@@ -2,11 +2,11 @@ package controllerscrms
 
 import (
 	"fmt"
+	"github.com/gin-contrib/sessions"
 	"github.com/gin-gonic/gin"
 	"go_mars/app/models"
 	"net/http"
 	"strconv"
-	"time"
 )
 
 func LoginIndex(c *gin.Context) {
@@ -30,11 +30,18 @@ func Login(c *gin.Context) {
 		return
 	}
 	userID := strconv.Itoa(int(user.ID))
-	//生成cookie
-	expiration := time.Now()
-	expiration = expiration.AddDate(0, 0, 30) //设置cookie的过期时间
-	//cookie信息
-	cookie := http.Cookie{Name: "userID", Value: userID, Expires: expiration}
-	http.SetCookie(c.Writer, &cookie)
+	//session信息
+	session := sessions.Default(c)
+	session.Set("currentUID", userID)
+	session.Set("currentUName", user.Name)
+	session.Save()
 	c.Redirect(http.StatusSeeOther, "/crms/homes")
+}
+
+//退出
+func Logout(c *gin.Context) {
+	session := sessions.Default(c)
+	session.Clear()
+	session.Save()
+	c.Redirect(http.StatusSeeOther, "/crms/login")
 }
